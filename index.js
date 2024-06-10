@@ -75,8 +75,7 @@ app.get('/api/users/:_id/logs', (req, res) => {
 
     }
     catch (err) {
-      console.error(err)
-      res.status(404).json({ message: err.message })
+      res.status(404).json({ message: 'Could not retrieve user logs'})
     }
   }
 
@@ -137,8 +136,7 @@ app.post('/api/users/:_id/exercises', (req, res) => {
 
     }
     catch (err) {
-      console.error(err)
-      res.status(404).json({ message: err.message });
+      res.status(404).json({ message: 'Could not create exercise'});
     }
 
   }
